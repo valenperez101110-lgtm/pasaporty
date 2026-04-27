@@ -1,413 +1,1866 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es-CO">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seguridad Oficial | Portal de Gestión y Validación de Citas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --blue: #2563eb;
-            --blue-mid: #1d4ed8;
-            --blue-pale: #eff6ff;
-            --blue-border: #bfdbfe;
-            --navy: #0f172a;
-            --navy-mid: #1e293b;
-            --gray: #64748b;
-            --gray-light: #f1f5f9;
-            --white: #ffffff;
-        }
+  <!-- ============================================================
+       PASAPORTWEB — Guía de Pasaporte Colombia
+       SEO optimizado para Google Ads
+       Versión 1.0
+  ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- SEO Meta Tags -->
+  <title>Cómo Sacar tu Pasaporte en Colombia Fácil y Rápido | Asesoría Personalizada</title>
+  <meta name="description" content="Aprende paso a paso cómo agendar tu cita de pasaporte en Colombia, cuánto cuesta, qué documentos necesitas y evita los errores más comunes. ¡Agenda hoy con nuestra asesoría!">
+  <meta name="keywords" content="renovar pasaporte Colombia, cita pasaporte Colombia, cómo agendar pasaporte Colombia, sacar pasaporte Colombia, tramitar pasaporte Cancillería, pasaporte colombiano requisitos">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="PasaportWeb Colombia">
+  <meta name="geo.region" content="CO">
+  <meta name="geo.country" content="Colombia">
 
-        body {
-            font-family: 'Sora', system-ui, sans-serif;
-            background: var(--white);
-            color: var(--navy);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cómo Sacar tu Pasaporte en Colombia — Guía Completa 2025">
+  <meta property="og:description" content="Paso a paso para agendar tu cita de pasaporte en Colombia. Evita errores y obtén tu pasaporte sin complicaciones.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
 
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 7%;
-            height: 68px;
-            background: var(--navy);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo {
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: var(--white);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--blue);
-            box-shadow: 0 0 0 3px rgba(37,99,235,0.3);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 3px rgba(37,99,235,0.3); }
-            50%       { box-shadow: 0 0 0 6px rgba(37,99,235,0.1); }
-        }
-        .nav-tag {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.35);
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Fraunces:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 
-        .hero-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: calc(100vh - 68px);
-        }
+  <style>
+    /* ============================================================
+       VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --navy:      #0A1628;
+      --deep:      #0D2147;
+      --blue:      #1A4FBF;
+      --sky:       #2D7DD2;
+      --accent:    #F0A500;
+      --gold:      #FFB800;
+      --light:     #EBF2FF;
+      --white:     #FFFFFF;
+      --gray-100:  #F7F9FC;
+      --gray-200:  #E8EDF5;
+      --gray-500:  #8896AA;
+      --gray-700:  #3D4C60;
+      --text:      #1C2B3A;
+      --success:   #0EB87F;
+      --danger:    #E5493A;
 
-        .hero-left {
-            background: var(--navy);
-            padding: 80px 7%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-left::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(37,99,235,0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(37,99,235,0.06) 1px, transparent 1px);
-            background-size: 48px 48px;
-            pointer-events: none;
-        }
-        .hero-left::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
-            bottom: -150px;
-            right: -150px;
-            pointer-events: none;
-        }
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 28px;
+      --radius-xl: 48px;
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            background: rgba(37,99,235,0.15);
-            border: 1px solid rgba(37,99,235,0.35);
-            color: #93c5fd;
-            padding: 7px 14px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            width: fit-content;
-            margin-bottom: 36px;
-        }
-        .badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #60a5fa;
-        }
+      --shadow-sm: 0 2px 12px rgba(10,22,40,0.08);
+      --shadow-md: 0 8px 40px rgba(10,22,40,0.14);
+      --shadow-lg: 0 20px 80px rgba(10,22,40,0.22);
+      --shadow-accent: 0 8px 32px rgba(240,165,0,0.35);
+      --shadow-blue: 0 8px 40px rgba(26,79,191,0.3);
 
-        h1 {
-            font-family: 'Instrument Serif', serif;
-            font-size: 4rem;
-            line-height: 1.1;
-            color: var(--white);
-            letter-spacing: -0.5px;
-            margin-bottom: 24px;
-        }
-        h1 span {
-            color: #60a5fa;
-            font-style: italic;
-        }
+      --transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-        .hero-p {
-            font-size: 0.97rem;
-            color: rgba(255,255,255,0.45);
-            font-weight: 300;
-            max-width: 400px;
-            line-height: 1.85;
-            margin-bottom: 48px;
-        }
+    *, *::before, *::after {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
 
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--blue);
-            color: var(--white);
-            padding: 16px 32px;
-            border-radius: 8px;
-            border: none;
-            font-family: 'Sora', sans-serif;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-            width: fit-content;
-            box-shadow: 0 4px 24px rgba(37,99,235,0.4);
-        }
-        .cta-btn:hover {
-            background: var(--blue-mid);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(37,99,235,0.5);
-        }
-        .cta-btn svg { transition: transform 0.2s; }
-        .cta-btn:hover svg { transform: translateX(4px); }
+    html { scroll-behavior: smooth; }
 
-        .hero-right {
-            position: relative;
-            overflow: hidden;
-            background: var(--blue-pale);
-        }
-        .hero-right img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            opacity: 0.85;
-            mix-blend-mode: multiply;
-        }
-        .hero-right::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(160deg, rgba(37,99,235,0.25) 0%, rgba(15,23,42,0.6) 100%);
-            z-index: 1;
-        }
+    body {
+      font-family: 'Sora', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
 
-        .corner-tl, .corner-br {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            z-index: 2;
-        }
-        .corner-tl {
-            top: 28px; left: 28px;
-            border-top: 2px solid rgba(255,255,255,0.4);
-            border-left: 2px solid rgba(255,255,255,0.4);
-        }
-        .corner-br {
-            bottom: 28px; right: 28px;
-            border-bottom: 2px solid rgba(255,255,255,0.4);
-            border-right: 2px solid rgba(255,255,255,0.4);
-        }
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+      line-height: 1.2;
+      font-weight: 700;
+    }
 
-        .img-badge {
-            position: absolute;
-            top: 32px;
-            right: 32px;
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 50px;
-            padding: 10px 18px;
-            font-size: 12px;
-            font-weight: 600;
-            color: white;
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .img-badge span {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #4ade80;
-            display: inline-block;
-        }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); }
+    h3 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
 
-        #cookie-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(15,23,42,0.65);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            animation: fadeIn 0.35s ease;
-        }
-        @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+    p { margin-bottom: 1rem; }
 
-        .cookie-box {
-            background: var(--white);
-            border-radius: 16px;
-            max-width: 440px;
-            width: 88%;
-            overflow: hidden;
-            box-shadow: 0 32px 80px rgba(15,23,42,0.45), 0 0 0 1px rgba(37,99,235,0.1);
-            animation: slideUp 0.4s cubic-bezier(0.16,1,0.3,1);
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px) }
-            to   { opacity: 1; transform: translateY(0) }
-        }
+    a { color: var(--sky); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent); }
 
-        .cookie-top {
-            background: var(--navy);
-            padding: 28px 32px;
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-        }
-        .cookie-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: rgba(37,99,235,0.25);
-            border: 1px solid rgba(37,99,235,0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-        .cookie-box h2 {
-            font-family: 'Sora', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.3px;
-            margin-bottom: 3px;
-        }
-        .cookie-kicker {
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #60a5fa;
-        }
+    /* ============================================================
+       UTILITIES
+    ============================================================ */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-        .cookie-body {
-            padding: 28px 32px;
-            border-bottom: 1px solid var(--gray-light);
-        }
-        .cookie-body p {
-            font-size: 0.9rem;
-            color: var(--gray);
-            line-height: 1.8;
-        }
+    .badge {
+      display: inline-block;
+      background: rgba(240,165,0,0.15);
+      color: var(--accent);
+      border: 1.5px solid rgba(240,165,0,0.4);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
 
-        .btn-group {
-            display: flex;
-            gap: 10px;
-            padding: 20px 32px;
-        }
-        .btn {
-            flex: 1;
-            padding: 14px;
-            border-radius: 8px;
-            font-family: 'Sora', sans-serif;
-            font-weight: 600;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: none;
-        }
-        .btn-acc {
-            background: var(--blue);
-            color: var(--white);
-            box-shadow: 0 2px 12px rgba(37,99,235,0.3);
-        }
-        .btn-acc:hover {
-            background: var(--blue-mid);
-            box-shadow: 0 4px 20px rgba(37,99,235,0.45);
-            transform: translateY(-1px);
-        }
-        .btn-rej {
-            background: var(--gray-light);
-            color: var(--navy);
-        }
-        .btn-rej:hover { background: #e2e8f0; }
-    </style>
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--navy);
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 36px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-accent);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 48px rgba(240,165,0,0.45);
+      color: var(--navy);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 32px;
+      border-radius: 100px;
+      border: 2px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: all var(--transition);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.7);
+      color: var(--white);
+    }
+
+    /* Section spacing */
+    section { padding: 80px 0; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-title .badge { display: block; text-align: center; }
+    .section-title h2 { color: var(--navy); margin-bottom: 12px; }
+    .section-title p {
+      color: var(--gray-700);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* Decorative lines */
+    .deco-line {
+      width: 48px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 4px;
+      margin: 16px auto 0;
+    }
+
+    /* ============================================================
+       TOPBAR
+    ============================================================ */
+    .topbar {
+      background: var(--navy);
+      color: rgba(255,255,255,0.65);
+      font-size: 0.78rem;
+      text-align: center;
+      padding: 8px 24px;
+      letter-spacing: 0.04em;
+    }
+    .topbar strong { color: var(--accent); }
+
+    /* ============================================================
+       HEADER / NAV
+    ============================================================ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,22,40,0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .nav-logo .logo-icon {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--accent), var(--sky));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--deep) 50%, #0F2D6B 100%);
+      color: var(--white);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Geometric background shapes */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,79,191,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(240,165,0,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Grid pattern overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+    }
+
+    .hero-content .badge {
+      background: rgba(240,165,0,0.2);
+      border-color: rgba(240,165,0,0.5);
+    }
+
+    .hero-content h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-content p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Trust indicators */
+    .hero-trust {
+      margin-top: 48px;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.82rem;
+    }
+
+    .trust-item .check {
+      width: 20px; height: 20px;
+      background: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    /* Hero visual — floating card */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .passport-card {
+      width: 300px;
+      background: linear-gradient(145deg, #1A3366 0%, #0D2147 100%);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+      position: relative;
+      transform: perspective(1000px) rotateY(-8deg) rotateX(4deg);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: perspective(1000px) rotateY(-8deg) rotateX(4deg) translateY(0); }
+      50% { transform: perspective(1000px) rotateY(-8deg) rotateX(4deg) translateY(-14px); }
+    }
+
+    .passport-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--accent), var(--sky));
+      border-radius: 20px 20px 0 0;
+    }
+
+    .passport-flag { font-size: 2.5rem; margin-bottom: 8px; }
+    .passport-card h3 {
+      color: var(--white);
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .passport-card p {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .passport-field {
+      background: rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+    }
+    .passport-field label {
+      display: block;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .passport-field span {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .passport-chip {
+      width: 36px; height: 28px;
+      background: linear-gradient(135deg, var(--accent), #FFD060);
+      border-radius: 4px;
+      margin-top: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .passport-chip::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1.5px solid rgba(0,0,0,0.2);
+      border-radius: 2px;
+    }
+
+    /* ============================================================
+       INTRO STRIP
+    ============================================================ */
+    .intro-strip {
+      background: var(--light);
+      padding: 48px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .intro-stat {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .stat-number {
+      font-family: 'Fraunces', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-number span { color: var(--accent); }
+
+    .intro-stat p {
+      color: var(--gray-700);
+      font-size: 0.88rem;
+      margin: 0;
+    }
+
+    /* ============================================================
+       STEPS SECTION
+    ============================================================ */
+    .steps-section {
+      background: var(--white);
+    }
+
+    .steps-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .step-card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      align-items: start;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      border: 1.5px solid var(--gray-200);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(26,79,191,0.25);
+    }
+
+    /* Diagonal accent stripe */
+    .step-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 5px; height: 100%;
+      background: linear-gradient(to bottom, var(--sky), var(--blue));
+      border-radius: 0;
+    }
+
+    .step-num {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      color: white;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-blue);
+      flex-shrink: 0;
+    }
+
+    .step-body h3 { color: var(--navy); margin-bottom: 8px; }
+    .step-body p { color: var(--gray-700); font-size: 0.93rem; margin-bottom: 0; }
+
+    .step-body ul {
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+    }
+    .step-body ul li { margin-bottom: 4px; }
+
+    .step-tag {
+      display: inline-block;
+      background: rgba(26,79,191,0.1);
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+
+    /* ============================================================
+       REQUIREMENTS / COSTS — FRAME TABS
+    ============================================================ */
+    .info-section { background: var(--navy); color: var(--white); }
+    .info-section .section-title h2 { color: var(--white); }
+    .info-section .section-title p { color: rgba(255,255,255,0.6); }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--sky));
+    }
+
+    .info-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(240,165,0,0.3);
+      transform: translateY(-4px);
+    }
+
+    .info-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .icon-gold { background: rgba(240,165,0,0.15); }
+    .icon-blue { background: rgba(45,125,210,0.2); }
+    .icon-green { background: rgba(14,184,127,0.15); }
+    .icon-red { background: rgba(229,73,58,0.15); }
+
+    .info-card h3 { color: var(--white); margin-bottom: 12px; }
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+    .info-card ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .info-card ul li:last-child { border-bottom: none; }
+    .info-card ul li::before {
+      content: '→';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      margin-top: 2px;
+    }
+
+    .cost-highlight {
+      background: linear-gradient(135deg, rgba(240,165,0,0.15), rgba(240,165,0,0.05));
+      border: 1.5px solid rgba(240,165,0,0.3);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin-top: 12px;
+    }
+    .cost-highlight p { margin: 0; color: rgba(255,255,255,0.6); font-size: 0.8rem; }
+    .cost-price {
+      font-family: 'Fraunces', serif;
+      font-size: 1.8rem;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1.1;
+      display: block;
+    }
+
+    /* ============================================================
+       ERRORS SECTION
+    ============================================================ */
+    .errors-section { background: var(--gray-100); }
+
+    .errors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .error-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      border: 1.5px solid var(--gray-200);
+      border-top: 4px solid var(--danger);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .error-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .error-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .error-card h3 {
+      color: var(--danger);
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .error-card p { color: var(--gray-700); font-size: 0.88rem; margin: 0; }
+
+    .error-tip {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: rgba(14,184,127,0.08);
+      border-left: 3px solid var(--success);
+      border-radius: 4px;
+      font-size: 0.82rem;
+      color: #0A6E4E;
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       HELP / ASESORÍA SECTION
+    ============================================================ */
+    .help-section { background: var(--white); }
+
+    .help-inner {
+      background: linear-gradient(135deg, var(--navy) 0%, #0F2D6B 100%);
+      border-radius: var(--radius-xl);
+      padding: 70px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .help-inner {
+        grid-template-columns: 1fr;
+        padding: 48px 32px;
+        gap: 40px;
+        border-radius: var(--radius-lg);
+      }
+    }
+
+    .help-inner::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(240,165,0,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .help-content { position: relative; z-index: 2; }
+    .help-content .badge { background: rgba(240,165,0,0.2); border-color: rgba(240,165,0,0.5); }
+    .help-content h2 { color: var(--white); margin-bottom: 16px; }
+    .help-content p { color: rgba(255,255,255,0.72); margin-bottom: 24px; }
+
+    .help-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 32px;
+    }
+    .help-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+      padding: 6px 0;
+    }
+    .help-features li .feat-check {
+      width: 22px; height: 22px;
+      background: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       CONTACT FORM
+    ============================================================ */
+    .form-wrapper {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 2;
+    }
+
+    .form-wrapper h3 {
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 1.3rem;
+    }
+
+    .form-wrapper p.form-sub {
+      color: var(--gray-500);
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--gray-100);
+      transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+      outline: none;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--sky);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(45,125,210,0.12);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+    .form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+      color: var(--navy);
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 15px;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: var(--shadow-accent);
+      transition: transform var(--transition), box-shadow var(--transition);
+      letter-spacing: 0.02em;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(240,165,0,0.5);
+    }
+
+    .form-privacy {
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--gray-500);
+      margin-top: 10px;
+    }
+
+    /* ============================================================
+       FAQ ACCORDION (CSS only)
+    ============================================================ */
+    .faq-section { background: var(--light); }
+
+    .faq-list { max-width: 760px; margin: 0 auto; }
+
+    .faq-item {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-item input[type="checkbox"] {
+      display: none;
+    }
+
+    .faq-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.95rem;
+      transition: background var(--transition);
+      user-select: none;
+    }
+
+    .faq-label:hover { background: var(--light); }
+
+    .faq-label::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--sky);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    .faq-item input:checked + .faq-label::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item input:checked + .faq-label {
+      background: var(--light);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .faq-item input:checked ~ .faq-body {
+      max-height: 300px;
+    }
+
+    .faq-body p {
+      padding: 20px 24px;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* ============================================================
+       POLICIES SECTION
+    ============================================================ */
+    .policies-section { background: var(--gray-100); padding: 60px 0; }
+
+    .policies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .policy-box {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border: 1.5px solid var(--gray-200);
+    }
+
+    .policy-box h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .policy-box p {
+      color: var(--gray-700);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .policy-box p + p { margin-top: 10px; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      padding: 60px 0 32px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .footer-brand .nav-logo { margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; max-width: 300px; }
+
+    .footer-disclaimer {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(229,73,58,0.1);
+      border: 1px solid rgba(229,73,58,0.25);
+      border-radius: 8px;
+      font-size: 0.78rem;
+      color: rgba(255,180,170,0.9);
+      line-height: 1.5;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-family: 'Sora', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      transition: color var(--transition);
+    }
+    .footer-col ul a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p { font-size: 0.78rem; }
+
+    .footer-badges {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ============================================================
+       CSS-ONLY HOVER EFFECTS & ANIMATIONS
+    ============================================================ */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .btn-primary {
+      background-size: 200% auto;
+      background-image: linear-gradient(90deg, var(--accent) 0%, var(--gold) 50%, var(--accent) 100%);
+    }
+
+    .btn-primary:hover {
+      background-position: right center;
+    }
+
+    /* Pulse ring on CTA */
+    .cta-pulse {
+      position: relative;
+      display: inline-block;
+    }
+
+    .cta-pulse::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 100px;
+      border: 2px solid var(--accent);
+      opacity: 0;
+      animation: pulse-ring 2.5s ease-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { opacity: 0.6; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.12); }
+    }
+
+    /* Fade-in animation for sections */
+    .fade-up {
+      animation: fadeUp 0.8s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Staggered children */
+    .stagger > *:nth-child(1) { animation-delay: 0.05s; }
+    .stagger > *:nth-child(2) { animation-delay: 0.12s; }
+    .stagger > *:nth-child(3) { animation-delay: 0.19s; }
+    .stagger > *:nth-child(4) { animation-delay: 0.26s; }
+    .stagger > *:nth-child(5) { animation-delay: 0.33s; }
+    .stagger > *:nth-child(6) { animation-delay: 0.40s; }
+
+    /* ============================================================
+       UNIQUE FINGERPRINT — Diagonal Frame Borders
+       The "PasaportWeb Signature"
+    ============================================================ */
+    .sig-frame {
+      position: relative;
+    }
+
+    .sig-frame::before, .sig-frame::after {
+      content: '';
+      position: absolute;
+      width: 48px; height: 48px;
+      border-color: var(--accent);
+      border-style: solid;
+      opacity: 0.5;
+    }
+
+    .sig-frame::before {
+      top: -10px; left: -10px;
+      border-width: 3px 0 0 3px;
+    }
+
+    .sig-frame::after {
+      bottom: -10px; right: -10px;
+      border-width: 0 3px 3px 0;
+    }
+
+    /* ============================================================
+       MEDIA QUERIES
+    ============================================================ */
+    @media (max-width: 600px) {
+      section { padding: 56px 0; }
+      .hero { padding: 72px 0 56px; }
+      .step-card { grid-template-columns: 1fr; }
+      .step-num { width: 42px; height: 42px; font-size: 1.1rem; }
+    }
+  </style>
 </head>
+
 <body>
 
-    <nav class="nav">
-        <a href="#" class="logo">
-            <span class="logo-dot"></span>
-            🛡 Portal de Citas
+  <!-- ============================================================
+       TOPBAR — Announcement
+  ============================================================ -->
+  <div class="topbar" role="banner" aria-label="Aviso importante">
+    ⚠️ Esta es una página <strong>informativa privada</strong>. No somos la Cancillería ni ninguna entidad del gobierno colombiano.
+  </div>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header role="banner">
+    <nav aria-label="Navegación principal">
+      <a href="#inicio" class="nav-logo" aria-label="PasaportWeb inicio">
+        <div class="logo-icon" aria-hidden="true">🛂</div>
+        PasaportWeb
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#pasos">Cómo hacerlo</a></li>
+        <li><a href="#requisitos">Requisitos</a></li>
+        <li><a href="#errores">Errores comunes</a></li>
+        <li><a href="#ayuda">Asesoría</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contacto" class="btn-primary" style="padding: 12px 26px; font-size: 0.88rem;">
+          Solicitar asesoría
         </a>
-        <span class="nav-tag">Estándar de Seguridad Oficial</span>
+      </div>
     </nav>
+  </header>
 
-    <main class="hero-wrap">
-        <div class="hero-left">
-            <span class="badge">Sistema de Validación Certificado</span>
-            <h1>Gestiona tu <span>Cita de Pasaporte.</span></h1>
-            <p class="hero-p">
-                Accede a nuestra plataforma segura para la validación y programación de trámites ciudadanos con
-                protección de datos de extremo a extremo.
+  <!-- ============================================================
+       MAIN
+  ============================================================ -->
+  <main id="inicio" role="main">
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-content fade-up">
+            <div class="badge">🇨🇴 Guía para colombianos · 2025</div>
+            <h1 id="hero-heading">
+              Saca tu pasaporte en Colombia<br>
+              <em>fácil y sin errores</em>
+            </h1>
+            <p>
+              Aprende exactamente cómo agendar tu cita en la Cancillería, qué documentos llevar,
+              cuánto cuesta y evita los errores que le hacen perder la cita a miles de personas.
             </p>
-            <button class="cta-btn">
-                Ingresar al Trámite
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
 
-        <div class="hero-right">
-            <div class="corner-tl"></div>
-            <div class="corner-br"></div>
-            <div class="img-badge"><span></span> Conexión Segura</div>
-            <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
-                alt="Seguridad Digital"
-            />
-        </div>
-    </main>
+            <div class="hero-buttons">
+              <div class="cta-pulse">
+                <a href="#pasos" class="btn-primary">Ver guía paso a paso</a>
+              </div>
+              <a href="#contacto" class="btn-secondary">Pedir asesoría personalizada</a>
+            </div>
 
-    <div id="cookie-overlay">
-        <div class="cookie-box">
-            <div class="cookie-top">
-                <div class="cookie-icon">🔒</div>
-                <div>
-                    <h2>Verificación de Seguridad</h2>
-                    <div class="cookie-kicker">Validación de sesión requerida</div>
-                </div>
+            <div class="hero-trust" role="list" aria-label="Garantías">
+              <div class="trust-item" role="listitem">
+                <div class="check" aria-hidden="true">✓</div>
+                <span>Guía actualizada 2025</span>
+              </div>
+              <div class="trust-item" role="listitem">
+                <div class="check" aria-hidden="true">✓</div>
+                <span>Sin costos ocultos</span>
+              </div>
+              <div class="trust-item" role="listitem">
+                <div class="check" aria-hidden="true">✓</div>
+                <span>Respuesta en menos de 2h</span>
+              </div>
             </div>
-            <div class="cookie-body">
-                <p>
-                    Para continuar con su solicitud de cita, es necesario validar su sesión. Utilizamos cookies técnicas
-                    para garantizar que la conexión sea segura y privada. ¿Desea continuar?
-                </p>
+          </div>
+
+          <!-- Floating passport card visual -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="passport-card">
+              <div class="passport-flag">🇨🇴</div>
+              <h3>República de Colombia</h3>
+              <p>PASAPORTE · PASSPORT</p>
+              <div class="passport-field">
+                <label>Tipo · Type</label>
+                <span>P — Ordinario</span>
+              </div>
+              <div class="passport-field">
+                <label>Vigencia · Validity</label>
+                <span>10 años · 5 años (menores)</span>
+              </div>
+              <div class="passport-field">
+                <label>Expedido por · Issued by</label>
+                <span>Cancillería de Colombia</span>
+              </div>
+              <div class="passport-chip"></div>
             </div>
-            <div class="btn-group">
-                <button class="btn btn-rej" onclick="handleredirt()">Salir</button>
-                <button class="btn btn-acc" onclick="handleredirt()">Validar y Continuar</button>
-            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INTRO STATS STRIP
+    ============================================================ -->
+    <div class="intro-strip" role="complementary" aria-label="Datos importantes">
+      <div class="container">
+        <div class="intro-grid stagger fade-up">
+          <div class="intro-stat">
+            <div class="stat-number">10<span>años</span></div>
+            <p>Vigencia para mayores de 18 años</p>
+          </div>
+          <div class="intro-stat">
+            <div class="stat-number">~$<span>270k</span></div>
+            <p>Costo aproximado del pasaporte ordinario</p>
+          </div>
+          <div class="intro-stat">
+            <div class="stat-number">7<span>días</span></div>
+            <p>Tiempo promedio de entrega</p>
+          </div>
+          <div class="intro-stat">
+            <div class="stat-number">1<span>paso</span></div>
+            <p>El agendamiento online es todo lo que necesitas para empezar</p>
+          </div>
+        </div>
+      </div>
     </div>
-<script>
-            function handleredirt() {
-                window.location.href = "https://pasport-gov.com/";
-            }
-        </script>
+
+    <!-- ============================================================
+         PASOS — PASO A PASO
+    ============================================================ -->
+    <section class="steps-section" id="pasos" aria-labelledby="steps-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="badge">Proceso completo</span>
+          <h2 id="steps-heading">Cómo agendar tu pasaporte en Colombia: paso a paso</h2>
+          <p>Sigue estas instrucciones exactas y evita cometer los errores más comunes que retrasan el trámite.</p>
+          <div class="deco-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="steps-grid stagger fade-up" role="list" aria-label="Pasos para sacar el pasaporte">
+
+          <article class="step-card" role="listitem">
+            <div class="step-num" aria-label="Paso 1">1</div>
+            <div class="step-body">
+              <span class="step-tag">Antes de empezar</span>
+              <h3>Verifica si necesitas pasaporte nuevo o renovación</h3>
+              <p>
+                Si tu pasaporte está vencido, dañado o te quedan menos de 6 meses de vigencia,
+                necesitas renovarlo. Si nunca has tenido, es tu primer trámite. El proceso en ambos casos
+                es prácticamente el mismo desde la Cancillería.
+              </p>
+            </div>
+          </article>
+
+          <article class="step-card" role="listitem">
+            <div class="step-num" aria-label="Paso 2">2</div>
+            <div class="step-body">
+              <span class="step-tag">Pago previo obligatorio</span>
+              <h3>Paga el impuesto de timbre antes de agendar</h3>
+              <p>
+                El pago se realiza en el banco Davivienda o mediante PSE en línea.
+                El valor para adultos es de aproximadamente <strong>$271.000 COP</strong>.
+                Guarda el comprobante de pago: lo necesitarás para completar el agendamiento y el día de la cita.
+              </p>
+            </div>
+          </article>
+
+          <article class="step-card" role="listitem">
+            <div class="step-num" aria-label="Paso 3">3</div>
+            <div class="step-body">
+              <span class="step-tag">Agendamiento online</span>
+              <h3>Ingresa al portal de la Cancillería y agenda tu cita</h3>
+              <p>
+                Visita el sitio oficial de la Cancillería de Colombia y busca la sección
+                <em>"Trámites de pasaporte"</em>. Elige la ciudad más cercana a ti, selecciona fecha y hora disponibles,
+                y completa tus datos personales exactamente como aparecen en tu cédula.
+              </p>
+              <ul>
+                <li>Portal oficial: <strong>cancilleria.gov.co</strong></li>
+                <li>Ten a la mano tu número de cédula</li>
+                <li>Verifica que el correo electrónico sea válido</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="step-card" role="listitem">
+            <div class="step-num" aria-label="Paso 4">4</div>
+            <div class="step-body">
+              <span class="step-tag">Confirmación</span>
+              <h3>Revisa tu correo electrónico y guarda la confirmación</h3>
+              <p>
+                Recibirás un correo con el número de cita y un código QR. Imprímelo o guárdalo en tu teléfono.
+                Sin este comprobante no podrás ingresar al punto de atención. Revisa también la carpeta de spam.
+              </p>
+            </div>
+          </article>
+
+          <article class="step-card" role="listitem">
+            <div class="step-num" aria-label="Paso 5">5</div>
+            <div class="step-body">
+              <span class="step-tag">El día de la cita</span>
+              <h3>Preséntate puntual con todos tus documentos</h3>
+              <p>
+                Llega al punto de atención de la Cancillería con al menos 20 minutos de anticipación.
+                Lleva todos los documentos requeridos (ver sección de requisitos). Si llegas tarde, perderás la cita.
+              </p>
+            </div>
+          </article>
+
+          <article class="step-card" role="listitem">
+            <div class="step-num" aria-label="Paso 6">6</div>
+            <div class="step-body">
+              <span class="step-tag">Recepción del pasaporte</span>
+              <h3>Recibe tu pasaporte en el plazo indicado</h3>
+              <p>
+                Una vez completado el trámite, el pasaporte es entregado en el mismo punto de atención.
+                El plazo habitual es entre <strong>3 y 7 días hábiles</strong>.
+                También existe el servicio de entrega express con mayor costo.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         REQUISITOS, COSTOS Y QUÉ LLEVAR
+    ============================================================ -->
+    <section class="info-section" id="requisitos" aria-labelledby="req-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="badge">Información clave</span>
+          <h2 id="req-heading">Requisitos, costos y qué llevar el día de la cita</h2>
+          <p>Todo lo que necesitas saber antes de presentarte en la Cancillería.</p>
+          <div class="deco-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="info-grid stagger fade-up">
+
+          <!-- Requisitos mayores -->
+          <article class="info-card">
+            <div class="info-card-icon icon-blue" aria-hidden="true">📋</div>
+            <h3>Documentos para adultos</h3>
+            <ul>
+              <li>Cédula de ciudadanía original vigente</li>
+              <li>Pasaporte anterior (si es renovación)</li>
+              <li>Comprobante de pago del impuesto de timbre</li>
+              <li>Confirmación de la cita (impresa o en celular)</li>
+              <li>Registro civil (para primer pasaporte)</li>
+            </ul>
+          </article>
+
+          <!-- Requisitos menores -->
+          <article class="info-card">
+            <div class="info-card-icon icon-gold" aria-hidden="true">👶</div>
+            <h3>Documentos para menores de edad</h3>
+            <ul>
+              <li>Tarjeta de identidad o registro civil</li>
+              <li>Cédula de ambos padres o tutor legal</li>
+              <li>Autorización notarial del padre/madre ausente</li>
+              <li>Pasaporte anterior del menor (si aplica)</li>
+              <li>Comprobante de pago correspondiente</li>
+            </ul>
+          </article>
+
+          <!-- Costos -->
+          <article class="info-card">
+            <div class="info-card-icon icon-green" aria-hidden="true">💰</div>
+            <h3>Costos aproximados 2025</h3>
+            <ul>
+              <li>Adulto (mayor de 18 años)</li>
+              <li>Menores de 3 a 17 años</li>
+              <li>Personas mayores de 65 años</li>
+              <li>Servicio express (entrega rápida)</li>
+            </ul>
+            <div class="cost-highlight">
+              <span class="cost-price">$271.000</span>
+              <p>Adulto — Tarifa general. Consulta en Davivienda o PSE el valor exacto vigente.</p>
+            </div>
+          </article>
+
+          <!-- Dónde hacerlo -->
+          <article class="info-card">
+            <div class="info-card-icon icon-red" aria-hidden="true">📍</div>
+            <h3>Dónde tramitar tu pasaporte</h3>
+            <ul>
+              <li>Puntos de atención Cancillería en todas las capitales</li>
+              <li>Consulados colombianos en el exterior</li>
+              <li>Centros de Atención al Migrante (CAM)</li>
+              <li>Algunas Alcaldías habilitadas (consultar disponibilidad)</li>
+              <li>Jornadas especiales en municipios menores</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ERRORES COMUNES
+    ============================================================ -->
+    <section class="errors-section" id="errores" aria-labelledby="errors-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="badge" style="background: rgba(229,73,58,0.1); color: var(--danger); border-color: rgba(229,73,58,0.3);">
+            ⚠️ Errores frecuentes
+          </span>
+          <h2 id="errors-heading">Errores que hacen perder la cita (y cómo evitarlos)</h2>
+          <p>Miles de colombianos pierden su cita cada mes por estos motivos. No cometas los mismos errores.</p>
+          <div class="deco-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="errors-grid stagger fade-up">
+
+          <article class="error-card">
+            <span class="error-icon" aria-hidden="true">💳</span>
+            <h3>No hacer el pago antes de agendar</h3>
+            <p>El pago del impuesto de timbre debe hacerse ANTES de agendar la cita en el portal. Sin el comprobante, no puedes completar el proceso.</p>
+            <div class="error-tip">✅ Paga primero en Davivienda o PSE, luego agenda.</div>
+          </article>
+
+          <article class="error-card">
+            <span class="error-icon" aria-hidden="true">⌨️</span>
+            <h3>Datos incorrectos en el formulario</h3>
+            <p>Un tilde mal puesto, un número de cédula errado o un correo con error pueden invalidar tu cita o impedirte recibirla.</p>
+            <div class="error-tip">✅ Revisa tres veces antes de confirmar el formulario.</div>
+          </article>
+
+          <article class="error-card">
+            <span class="error-icon" aria-hidden="true">🕐</span>
+            <h3>Llegar tarde a la cita</h3>
+            <p>Los puntos de atención tienen tolerancia cero. Si llegas 10 minutos tarde, la cita se cancela y debes reiniciar el proceso de agendamiento.</p>
+            <div class="error-tip">✅ Llega al menos 20 minutos antes de tu hora asignada.</div>
+          </article>
+
+          <article class="error-card">
+            <span class="error-icon" aria-hidden="true">📄</span>
+            <h3>Olvidar documentos importantes</h3>
+            <p>Ir sin el pasaporte anterior en renovaciones, sin el comprobante de pago o sin la confirmación de cita hace que te rechacen en la puerta.</p>
+            <div class="error-tip">✅ Prepara una lista de chequeo la noche anterior.</div>
+          </article>
+
+          <article class="error-card">
+            <span class="error-icon" aria-hidden="true">📧</span>
+            <h3>No revisar el correo de confirmación</h3>
+            <p>Muchas personas no verifican su carpeta de spam y pierden el correo con el código QR de la cita.</p>
+            <div class="error-tip">✅ Revisa también spam/correo no deseado inmediatamente.</div>
+          </article>
+
+          <article class="error-card">
+            <span class="error-icon" aria-hidden="true">🔗</span>
+            <h3>Usar páginas falsas o intermediarios no autorizados</h3>
+            <p>Hay portales falsos que cobran por "ayudar" a agendar y roban tus datos o dinero. El agendamiento en la Cancillería es gratuito.</p>
+            <div class="error-tip">✅ Usa solo cancilleria.gov.co o asesores de confianza.</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ASESORÍA + FORMULARIO DE CONTACTO
+    ============================================================ -->
+    <section class="help-section" id="ayuda" aria-labelledby="help-heading">
+      <div class="container">
+        <div class="help-inner sig-frame">
+
+          <div class="help-content">
+            <div class="badge">🤝 Servicio personalizado</div>
+            <h2 id="help-heading">¿Necesitas ayuda con tu pasaporte? Te acompañamos en todo el proceso</h2>
+            <p>
+              Entendemos que el proceso puede ser confuso y frustrante. Nuestro equipo te guía paso a paso,
+              verifica que tus documentos estén en orden y te ayuda a evitar errores costosos.
+            </p>
+            <ul class="help-features">
+              <li><div class="feat-check" aria-hidden="true">✓</div> Revisión de documentos antes de la cita</li>
+              <li><div class="feat-check" aria-hidden="true">✓</div> Guía en el proceso de agendamiento online</li>
+              <li><div class="feat-check" aria-hidden="true">✓</div> Asesoría para menores y casos especiales</li>
+              <li><div class="feat-check" aria-hidden="true">✓</div> Respuesta rápida por WhatsApp y correo</li>
+              <li><div class="feat-check" aria-hidden="true">✓</div> Consulta inicial sin costo</li>
+            </ul>
+            <a href="#contacto" class="btn-primary">Hablar con un asesor ahora</a>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <div class="form-wrapper" id="contacto" aria-labelledby="form-heading">
+            <h3 id="form-heading">Solicitar asesoría gratuita</h3>
+            <p class="form-sub">Te respondemos en menos de 2 horas hábiles</p>
+
+            <form
+              action="mailto:TU_CORREO@dominio.com"
+              method="POST"
+              enctype="text/plain"
+              aria-label="Formulario de contacto para asesoría de pasaporte"
+              novalidate
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre completo *</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                    autocomplete="given-name"
+                    aria-required="true"
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono / WhatsApp *</label>
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="3XX XXX XXXX"
+                    required
+                    autocomplete="tel"
+                    aria-required="true"
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="tucorreo@ejemplo.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="ciudad">Ciudad *</label>
+                <select id="ciudad" name="ciudad" required aria-required="true">
+                  <option value="" disabled selected>Selecciona tu ciudad</option>
+                  <option>Bogotá</option>
+                  <option>Medellín</option>
+                  <option>Cali</option>
+                  <option>Barranquilla</option>
+                  <option>Cartagena</option>
+                  <option>Bucaramanga</option>
+                  <option>Pereira</option>
+                  <option>Manizales</option>
+                  <option>Otra ciudad</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="tramite">Tipo de trámite *</label>
+                <select id="tramite" name="tramite" required aria-required="true">
+                  <option value="" disabled selected>¿Qué necesitas?</option>
+                  <option>Primer pasaporte (adulto)</option>
+                  <option>Renovación de pasaporte</option>
+                  <option>Pasaporte para menor de edad</option>
+                  <option>Pasaporte urgente / express</option>
+                  <option>No sé cuál aplica para mí</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">¿En qué necesitas ayuda?</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Cuéntanos brevemente tu situación o dudas específicas..."
+                  aria-label="Mensaje adicional"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="form-submit">
+                Enviar solicitud de asesoría →
+              </button>
+              <p class="form-privacy">
+                🔒 Tus datos están protegidos. No los compartimos con terceros.
+                Al enviar aceptas nuestra <a href="#politicas" style="color: var(--sky);">política de privacidad</a>.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ — PREGUNTAS FRECUENTES (CSS-only accordion)
+    ============================================================ -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="badge">Resolvemos tus dudas</span>
+          <h2 id="faq-heading">Preguntas frecuentes sobre el pasaporte colombiano</h2>
+          <div class="deco-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="faq-list" role="list" aria-label="Preguntas frecuentes">
+
+          <div class="faq-item" role="listitem">
+            <input type="checkbox" id="faq1" name="faq">
+            <label class="faq-label" for="faq1">¿Cuánto tiempo tarda el proceso completo de pasaporte?</label>
+            <div class="faq-body">
+              <p>El proceso completo, desde el agendamiento hasta recibir el pasaporte, suele tardar entre 1 y 3 semanas. La cita en sí dura aproximadamente 20 a 30 minutos, y el pasaporte se entrega en un plazo de 3 a 7 días hábiles en la modalidad regular. Existe el servicio express con entrega más rápida y costo adicional.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <input type="checkbox" id="faq2" name="faq">
+            <label class="faq-label" for="faq2">¿Puedo renovar mi pasaporte si todavía tiene vigencia?</label>
+            <div class="faq-body">
+              <p>Sí, puedes renovar tu pasaporte en cualquier momento, incluso si aún tiene vigencia. De hecho, muchos países exigen que el pasaporte tenga al menos 6 meses de vigencia para ingresar, por lo que renovarlo con tiempo es recomendable. No necesitas esperar a que se venza.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <input type="checkbox" id="faq3" name="faq">
+            <label class="faq-label" for="faq3">¿Qué pasa si cancelo o no asisto a la cita?</label>
+            <div class="faq-body">
+              <p>Si no asistes sin cancelar previamente, el sistema puede bloquearte temporalmente para nuevas citas. Si necesitas cancelar, hazlo con al menos 24 horas de anticipación a través del portal de la Cancillería. El pago del impuesto no se devuelve si ya fue procesado, pero puedes usarlo en una cita posterior durante el período de vigencia del comprobante.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <input type="checkbox" id="faq4" name="faq">
+            <label class="faq-label" for="faq4">¿Puedo tramitar el pasaporte de mi hijo sin el otro padre?</label>
+            <div class="faq-body">
+              <p>Sí, pero debes presentar una autorización notarial del padre o madre ausente. Si uno de los padres no puede asistir, la notaría puede expedir este documento. En casos especiales (padre fallecido, desaparecido, etc.), la Cancillería tiene procedimientos alternativos. Recomendamos consultar previamente para tu caso específico.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <input type="checkbox" id="faq5" name="faq">
+            <label class="faq-label" for="faq5">¿Es seguro pagar el pasaporte por PSE?</label>
+            <div class="faq-body">
+              <p>Sí, siempre y cuando lo hagas a través del portal oficial del banco Davivienda o los portales autorizados por la Cancillería. Nunca realices pagos en páginas de terceros que no sean las oficiales. Guarda siempre el comprobante en PDF y también imprímelo como respaldo.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <input type="checkbox" id="faq6" name="faq">
+            <label class="faq-label" for="faq6">¿Cuántos años tiene de vigencia el pasaporte colombiano?</label>
+            <div class="faq-body">
+              <p>Para mayores de 18 años, el pasaporte ordinario tiene una vigencia de 10 años. Para niños de 0 a 2 años, la vigencia es de 3 años. Para menores de 3 a 17 años, la vigencia es de 5 años. Existe también el pasaporte de emergencia con vigencia de 1 año para situaciones urgentes.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         POLÍTICAS DE PRIVACIDAD Y TÉRMINOS
+    ============================================================ -->
+    <section class="policies-section" id="politicas" aria-labelledby="policies-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="badge">Legal</span>
+          <h2 id="policies-heading">Políticas de privacidad y términos de uso</h2>
+          <div class="deco-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="policies-grid">
+
+          <div class="policy-box">
+            <h3>🔒 Política de Privacidad</h3>
+            <p>
+              PasaportWeb recopila únicamente los datos que usted proporciona voluntariamente a través del formulario de contacto
+              (nombre, correo electrónico, teléfono y ciudad) con el único propósito de brindar asesoría personalizada sobre
+              el trámite de pasaporte en Colombia.
+            </p>
+            <p>
+              Sus datos no serán vendidos, cedidos ni compartidos con terceros sin su consentimiento expreso.
+              La información es almacenada de manera segura y puede solicitar su eliminación en cualquier momento
+              enviando un correo a nuestra dirección de contacto.
+            </p>
+            <p>
+              Esta política aplica únicamente a la información recopilada en este sitio web y está en conformidad con
+              la Ley 1581 de 2012 (Protección de Datos Personales de Colombia).
+            </p>
+          </div>
+
+          <div class="policy-box">
+            <h3>📜 Términos y Condiciones</h3>
+            <p>
+              <strong>Naturaleza del servicio:</strong> PasaportWeb es un servicio privado de información y asesoría.
+              <strong>No somos</strong> la Cancillería de Colombia ni ninguna entidad gubernamental. No tramitamos
+              pasaportes directamente ni tenemos acceso a los sistemas oficiales.
+            </p>
+            <p>
+              <strong>Alcance:</strong> Brindamos orientación informativa y acompañamiento en el proceso de agendamiento
+              y preparación de documentos. La decisión final y los trámites siempre se realizan ante los canales oficiales
+              del gobierno.
+            </p>
+            <p>
+              <strong>Exactitud de la información:</strong> Nos esforzamos por mantener la información actualizada,
+              pero los trámites gubernamentales pueden cambiar. Siempre verifique los requisitos en cancilleria.gov.co
+              antes de su cita.
+            </p>
+          </div>
+
+          <div class="policy-box">
+            <h3>⚠️ Aviso Importante</h3>
+            <p>
+              Este sitio web <strong>NO es</strong> el sitio oficial del gobierno colombiano para tramitar pasaportes.
+              El portal oficial es <strong>cancilleria.gov.co</strong>.
+            </p>
+            <p>
+              Los costos mencionados son aproximados y de referencia. Las tarifas oficiales son establecidas por el
+              gobierno y pueden variar. Consulte siempre la tarifa vigente en los canales oficiales antes de realizar
+              cualquier pago.
+            </p>
+            <p>
+              Al usar este sitio y contactarnos, usted acepta que la asesoría es de carácter informativo y
+              orientativo, y que la responsabilidad del trámite recae en el usuario ante las entidades gubernamentales.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo" aria-label="PasaportWeb inicio">
+            <div class="logo-icon" aria-hidden="true">🛂</div>
+            PasaportWeb
+          </a>
+          <p>
+            Guía informativa y asesoría privada para colombianos que necesitan tramitar o renovar
+            su pasaporte. Orientación clara, sin complicaciones.
+          </p>
+          <div class="footer-disclaimer" role="alert" aria-label="Aviso no gubernamental">
+            ⚠️ <strong>No somos la Cancillería de Colombia.</strong> Somos un servicio privado de asesoría
+            e información. El portal oficial del gobierno es <strong>cancilleria.gov.co</strong>.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#pasos">Cómo agendar paso a paso</a></li>
+            <li><a href="#requisitos">Requisitos y costos</a></li>
+            <li><a href="#errores">Errores comunes</a></li>
+            <li><a href="#ayuda">Asesoría personalizada</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#politicas">Política de privacidad</a></li>
+            <li><a href="#politicas">Términos y condiciones</a></li>
+            <li><a href="#contacto">Formulario de contacto</a></li>
+          </ul>
+
+          <h4 style="margin-top: 28px;">Palabras clave</h4>
+          <p style="font-size: 0.78rem; color: rgba(255,255,255,0.3); line-height: 1.6;">
+            renovar pasaporte Colombia · cita pasaporte Colombia · cómo agendar pasaporte · sacar pasaporte colombiano · requisitos pasaporte 2025
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 PasaportWeb — Servicio privado de asesoría. Todos los derechos reservados.</p>
+        <div class="footer-badges" aria-label="Características del sitio">
+          <span class="footer-badge">✓ HTTPS Seguro</span>
+          <span class="footer-badge">✓ Ley 1581/2012</span>
+          <span class="footer-badge">✓ No Gov</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
